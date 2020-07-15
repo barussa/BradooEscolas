@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<odoo>
+
+    <menuitem name="Bradoo Escolas" id="bradooescolas_menu_root"/>
+
+
+    <menuitem name="Salas" id="salas" parent="bradoo_escolas.bradooescolas_menu_root"
+    action="bradoo_escolas.action_window_class"/>
+
+     <menuitem name="Cursos" id="cursos" parent="bradoo_escolas.bradooescolas_menu_root"
+    action="bradoo_escolas.action_window_courses"/>
+
+</odoo>

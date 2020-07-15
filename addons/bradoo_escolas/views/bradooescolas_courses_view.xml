@@ -1,0 +1,30 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="bradooescolas_courses_list">
+      <field name="name">bradooescolas_courses</field>
+      <field name="model">bradooescolas.courses</field>
+      <field name="arch" type="xml">
+        <tree string="BradooEscolasCourses">
+          <field name="courses_name"/>
+          <field name="professor_name"/>
+          <field name="product"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_window_courses">
+      <field name="name">Cursos</field>
+      <field name="res_model">bradooescolas.courses</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5,0,0),
+        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_courses_list')})]"/> 
+    </record>
+
+
+  </data>
+</odoo>
