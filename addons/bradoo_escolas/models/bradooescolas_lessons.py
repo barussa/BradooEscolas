@@ -5,8 +5,7 @@ class BradooEscolasLessons(models.Model):
     _name = 'bradooescolas.lessons'
     _description = 'lessons'
 
-    courses_name = fields.Char(string='Course Name', required=True)
-    professor_name = fields.Char(string='Professor')
-    product = fields.Char(string='Product')
-    date = fields.Datetime()
-    class_id = fields.Integer()
+    course_id = fields.Many2one('bradooescolas.courses', string='Curso')
+    professor_id = fields.Many2one('res.partner', string='Professor')
+    date = fields.Date()
+    class_id = fields.Many2one('bradooescolas.class', string='Salas')

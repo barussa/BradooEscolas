@@ -7,9 +7,9 @@
       <field name="model">bradooescolas.lessons</field>
       <field name="arch" type="xml">
         <tree string="BradooEscolasLessons">
-          <field name="courses_name"/>
-          <field name="professor_name"/>
-          <field name="product"/>
+          <field name="course_id"/>
+          <field name="professor_id"/>
+          <field name="class_id"/>
           <field name="date"/>
         </tree>
       </field>

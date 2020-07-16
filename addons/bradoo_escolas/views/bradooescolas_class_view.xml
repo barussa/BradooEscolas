@@ -9,8 +9,8 @@
         <tree string="BradooEscolasClass">
           <field name="name"/>
           <field name="alumns"/>
-          <field name="professor"/>
-          <field name="course"/>
+          <field name="professor_id"/>
+          <field name="course_id"/>
         </tree>
       </field>
     </record>

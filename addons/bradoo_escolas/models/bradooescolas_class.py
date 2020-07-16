@@ -6,9 +6,7 @@ class BradooEscolasClass(models.Model):
     _description = 'class'
 
     name = fields.Char(string='Class Name')
-    alumns = fields.Char(string='Alumns')
-    professor = fields.Char(string='Professor')
-    course = fields.Char(string='Course')
-    course_id = fields.Integer()
-    professor_id = fields.Integer()
+    alumns = fields.Many2one('res.partner', string='Alunos')
+    course_id = fields.Many2one('bradooescolas.courses', string='Curso')
+    professor_id = fields.Many2one('res.partner', string='Professor')
     description = fields.Text()

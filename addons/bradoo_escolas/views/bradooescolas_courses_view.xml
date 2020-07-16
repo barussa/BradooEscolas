@@ -8,8 +8,8 @@
       <field name="arch" type="xml">
         <tree string="BradooEscolasCourses">
           <field name="courses_name"/>
-          <field name="professor_name"/>
-          <field name="product"/>
+          <field name="professor_id"/>
+          <field name="product_id"/>
         </tree>
       </field>
     </record>
