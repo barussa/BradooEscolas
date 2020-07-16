@@ -8,7 +8,10 @@
     <menuitem name="Salas" id="salas" parent="bradoo_escolas.bradooescolas_menu_root"
     action="bradoo_escolas.action_window_class"/>
 
-     <menuitem name="Cursos" id="cursos" parent="bradoo_escolas.bradooescolas_menu_root"
+    <menuitem name="Cursos" id="cursos" parent="bradoo_escolas.bradooescolas_menu_root"
     action="bradoo_escolas.action_window_courses"/>
+
+    <menuitem name="Aulas" id="aulas" parent="bradoo_escolas.bradooescolas_menu_root"
+    action="bradoo_escolas.action_window_lessons"/>
 
 </odoo>

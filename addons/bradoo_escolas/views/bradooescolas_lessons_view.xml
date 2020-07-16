@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="bradooescolas_lessons_list">
+      <field name="name">bradooescolas_lessons</field>
+      <field name="model">bradooescolas.lessons</field>
+      <field name="arch" type="xml">
+        <tree string="BradooEscolasLessons">
+          <field name="courses_name"/>
+          <field name="professor_name"/>
+          <field name="product"/>
+          <field name="date"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_window_lessons">
+      <field name="name">Aulas</field>
+      <field name="res_model">bradooescolas.lessons</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_ids" eval="[(5,0,0),
+        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_lessons_list')})]"/> 
+    </record>
+
+
+  </data>
+</odoo>

@@ -2,7 +2,7 @@ from odoo import models, fields, api
 
 
 class BradooEscolasLessons(models.Model):
-    _name = 'bradooescola_lessons'
+    _name = 'bradooescolas.lessons'
     _description = 'lessons'
 
     courses_name = fields.Char(string='Course Name', required=True)

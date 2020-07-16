@@ -27,6 +27,7 @@
         'security/ir.model.access.csv',
         'views/bradooescolas_class_view.xml',
         'views/bradooescolas_courses_view.xml',
+        'views/bradooescolas_lessons_view.xml',
         'views/bradooescolas_menu.xml',
         # 'views/templates.xml',
     ],
