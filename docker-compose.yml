@@ -8,10 +8,9 @@ services:
       - "8069:8069"
     volumes:
       - odoo-web-data:/var/lib/odoo
-      #- ./etc:/etc/odoo
+      - ./etc:/etc/odoo
       - ./addons:/mnt/extra-addons
-    #tty: true	
-    #command: odoo
+    #  command: odoo -u bradoo_escolas
   db:
     image: postgres:10
     environment:

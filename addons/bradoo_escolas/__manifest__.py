@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['sale', 'hr'],
+    'depends': ['sale_management', 'hr'],
 
     # always loaded
     'data': [
@@ -28,6 +28,8 @@
         'views/bradooescolas_class_view.xml',
         'views/bradooescolas_courses_view.xml',
         'views/bradooescolas_lessons_view.xml',
+        'views/product_template_view.xml',
+        'views/res_partner_view.xml',
         'views/bradooescolas_menu.xml',
         # 'views/templates.xml',
     ],
