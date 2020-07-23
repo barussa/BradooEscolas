@@ -14,6 +14,26 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="bradooescolas_courses_form">
+      <field name="name">bradooescolas_courses</field>
+      <field name="model">bradooescolas.courses</field>
+      <field name="arch" type="xml">
+        <form string="BradooEscolasCourses">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+            <group>
+              <field name="professor_id"/>
+            </group>
+            <group>
+              <field name="product_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
 
     <!-- actions opening views on models -->
 
@@ -22,7 +42,8 @@
       <field name="res_model">bradooescolas.courses</field>
       <field name="view_mode">tree,form</field>
       <field name="view_ids" eval="[(5,0,0),
-        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_courses_list')})]"/> 
+        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_courses_list')}),
+        (0,0,{'view_mode': 'form','view_id': ref('bradooescolas_courses_form')})]"/> 
     </record>
 
 

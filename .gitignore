@@ -1,3 +1,13 @@
 idea/
 .vscode/
 _pycache_/
+addons/bradoo_escolas/models/__pycache__/
+addons/bradoo_escolas/models/__pycache__/res_partner.cpython-37.pyc
+addons/bradoo_escolas/models/__pycache__/product_template.cpython-37.pyc
+addons/bradoo_escolas/models/__pycache__/bradooescolas_lessons.cpython-37.pyc
+addons/bradoo_escolas/models/__pycache__/bradooescolas_courses.cpython-37.pyc
+addons/bradoo_escolas/models/__pycache__/bradooescolas_class.cpython-37.pyc
+addons/bradoo_escolas/models/__pycache__/__init__.cpython-37.pyc
+addons/bradoo_escolas/__pycache__/__init__.cpython-37.pyc
+addons/bradoo_escolas/controllers/__pycache__/__init__.cpython-37.pyc
+addons/bradoo_escolas/controllers/__pycache__/controllers.cpython-37.pyc

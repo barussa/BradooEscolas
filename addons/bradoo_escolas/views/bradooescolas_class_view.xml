@@ -4,7 +4,7 @@
 
     <record model="ir.ui.view" id="bradooescolas_class_list">
       <field name="name">bradooescolas_class</field>
-      <field name="model">bradooescolas.class</field>
+      <field name="model">bradooescolas.classes</field>
       <field name="arch" type="xml">
         <tree string="BradooEscolasClass">
           <field name="name"/>
@@ -15,15 +15,38 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="bradooescolas_class_form">
+      <field name="name">bradooescolas_class</field>
+      <field name="model">bradooescolas.classes</field>
+      <field name="arch" type="xml">
+        <form string="BradooEscolasClass">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+            <group>
+              <field name="alumns"/>
+            </group>
+            <group>
+              <field name="professor_id"/>
+            </group>
+            <group>
+              <field name="course_id"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
 
     <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="action_window_class">
       <field name="name">Turmas</field>
-      <field name="res_model">bradooescolas.class</field>
+      <field name="res_model">bradooescolas.classes</field>
       <field name="view_mode">tree,form</field>
       <field name="view_ids" eval="[(5,0,0),
-        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_class_list')})]"/> 
+        (0,0,{'view_mode': 'tree','view_id': ref('bradooescolas_class_list')}),
+        (0,0,{'view_mode': 'form','view_id': ref('bradooescolas_class_form')})]"/> 
     </record>
 
 
