@@ -1,0 +1,4 @@
+id,name,type,categ_id:id,rental,list_price,iscourse
+product_product_01,Curso de Node,service,product.product_category_1,False,1000.00,True 
+product_product_02,Curso de Javascript,service,product.product_category_1,False,800.00,True 
+product_product_03,Curso de PHP,service,product.product_category_1,False,5000.00,True 

@@ -5,7 +5,7 @@ class BradooEscolasLessons(models.Model):
     _name = 'bradooescolas.lessons'
     _description = 'lessons'
 
-    name = fields.Char(string='Aula')
+    name = fields.Char(string='Aula', default='Aula')
     class_id = fields.Many2one('bradooescolas.classes', string='Turma')
     professor_id = fields.Many2one(
         related='class_id.professor_id', string='Professor')

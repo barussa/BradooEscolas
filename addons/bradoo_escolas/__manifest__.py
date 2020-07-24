@@ -31,6 +31,7 @@
         'views/product_template_view.xml',
         'views/res_partner_view.xml',
         'views/bradooescolas_menu.xml',
+        'data/product.product.csv',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
