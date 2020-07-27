@@ -10,7 +10,7 @@ services:
       - odoo-web-data:/var/lib/odoo
       - ./etc:/etc/odoo
       - ./addons:/mnt/extra-addons
-    #  command: odoo -u bradoo_escolas
+    command: odoo -u bradoo_escolas
   db:
     image: postgres:10
     environment:

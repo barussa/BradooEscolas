@@ -7,7 +7,7 @@ class BradooEscolasClass(models.Model):
     _name = 'bradooescolas.classes'
     _description = 'class'
 
-    name = fields.Char(string='Turma', default='Turma')
+    name = fields.Char(string='Turma')
     alumns = fields.Many2many(
         comodel_name='res.partner', relation="qualquero",
         column1="class_id", column2="partner_id", string='Alunos')
@@ -16,6 +16,7 @@ class BradooEscolasClass(models.Model):
         ('isprofessor', '=', True)])
     description = fields.Text()
 
+    # @api.depends('course_id')
     @api.onchange('alumns', 'course_id')
     def _onchange_alumns(self):
         values = []
@@ -27,3 +28,7 @@ class BradooEscolasClass(models.Model):
                 if line.product_id.id == self.course_id.product_id.id:
                     values.append(move.partner_id.id)
         return {'domain': {'alumns': [('id', 'in', values)]}}
+
+    @api.onchange('course_id')
+    def _onchange_course(self):
+        self.alumns = None
