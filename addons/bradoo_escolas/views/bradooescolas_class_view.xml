@@ -7,10 +7,10 @@
       <field name="model">bradooescolas.classes</field>
       <field name="arch" type="xml">
         <tree string="BradooEscolasClass">
+          <field name="course_id"/>
+          <field name="professor_id"/>
           <field name="name"/>
           <field name="alumns"/>
-          <field name="professor_id"/>
-          <field name="course_id"/>
         </tree>
       </field>
     </record>
@@ -22,16 +22,20 @@
         <form string="BradooEscolasClass">
           <sheet>
             <group>
-              <field name="name"/>
-            </group>
-            <group>
-              <field name="alumns"/>
+              <field name="course_id"/>
             </group>
             <group>
               <field name="professor_id"/>
             </group>
             <group>
-              <field name="course_id"/>
+              <field name="name"/>
+            </group>
+            <group>
+              <field name="alumns" widget="many2many_tags">
+                <tree editable='bottom'>
+                  <field name="name"/>
+                </tree>
+              </field>
             </group>
           </sheet>
         </form>

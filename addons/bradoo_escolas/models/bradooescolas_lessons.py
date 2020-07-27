@@ -17,10 +17,8 @@ class BradooEscolasLessons(models.Model):
     @api.onchange('class_id')
     def _onchange_class_id(self):
         attendances = [(5, 0, 0)]
-        print('olaaaaaaaaaaaaaaaaa!!!!!!!!!!!!!!!!!!!!!!!!!', self)
         alumns = self.class_id.alumns
         for alumn in alumns:
-            print('testeeeeeeeeeeeeeeaaaaaaaaaae', alumn)
             attendances.append((0, 0, {
                 'alumn_id': alumn.id
             }))
