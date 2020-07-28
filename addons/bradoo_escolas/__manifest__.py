@@ -24,6 +24,7 @@
 
     # always loaded
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/bradooescolas_class_view.xml',
         'views/bradooescolas_courses_view.xml',
